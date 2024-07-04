@@ -1,7 +1,9 @@
 package hello.core.calculator;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+@Component
 public class OperatorV0 implements Operator{
     private final List<String> operator = List.of("+", "-", "*", "/");
 

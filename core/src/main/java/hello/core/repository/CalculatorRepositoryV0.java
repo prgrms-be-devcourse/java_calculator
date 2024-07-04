@@ -1,9 +1,11 @@
 package hello.core.repository;
 
+import org.springframework.stereotype.Component;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-
+@Component
 public class CalculatorRepositoryV0 implements CalculatorRepository {
 
     private Map<String, Double> memory = new LinkedHashMap<>();

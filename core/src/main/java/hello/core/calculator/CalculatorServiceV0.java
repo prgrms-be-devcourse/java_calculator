@@ -1,17 +1,19 @@
 package hello.core.calculator;
 
 import hello.core.repository.CalculatorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class CalculatorServiceV0 implements CalculatorService{
 
     private CalculatorRepository memory;
     private List<String> tmpMemoryOperator = new ArrayList<>();
     private List<Double> tmpMemoryOperand = new ArrayList<>();
     private Operator operatorInstance;
-
+    @Autowired
     public CalculatorServiceV0(Operator operatorInstance, CalculatorRepository memory) {
         this.operatorInstance = operatorInstance;
         this.memory = memory;
